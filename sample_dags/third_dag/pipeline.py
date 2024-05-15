@@ -66,7 +66,7 @@ else:
             return {"status" : "success", "data_path" : data_path}
 
         @task()
-        def data_analysis(data_package: dict):
+        def data_analysis():
             """
             #### Analysis
             This task analyzes the data given a path to the recently cleansed data.
