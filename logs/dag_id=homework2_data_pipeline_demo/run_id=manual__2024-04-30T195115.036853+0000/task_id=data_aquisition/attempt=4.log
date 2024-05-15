@@ -1,0 +1,57 @@
+[2024-04-30T20:29:41.808+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: homework2_data_pipeline_demo.data_aquisition manual__2024-04-30T19:51:15.036853+00:00 [queued]>
+[2024-04-30T20:29:41.819+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: homework2_data_pipeline_demo.data_aquisition manual__2024-04-30T19:51:15.036853+00:00 [queued]>
+[2024-04-30T20:29:41.820+0000] {taskinstance.py:2193} INFO - Starting attempt 4 of 4
+[2024-04-30T20:29:41.837+0000] {taskinstance.py:2217} INFO - Executing <Task(_PythonVirtualenvDecoratedOperator): data_aquisition> on 2024-04-30 19:51:15.036853+00:00
+[2024-04-30T20:29:41.845+0000] {standard_task_runner.py:60} INFO - Started process 4964 to run task
+[2024-04-30T20:29:41.849+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'homework2_data_pipeline_demo', 'data_aquisition', 'manual__2024-04-30T19:51:15.036853+00:00', '--job-id', '26', '--raw', '--subdir', 'DAGS_FOLDER/pipeline.py', '--cfg-path', '/tmp/tmpgf64g3h6']
+[2024-04-30T20:29:41.851+0000] {standard_task_runner.py:88} INFO - Job 26: Subtask data_aquisition
+[2024-04-30T20:29:41.915+0000] {task_command.py:423} INFO - Running <TaskInstance: homework2_data_pipeline_demo.data_aquisition manual__2024-04-30T19:51:15.036853+00:00 [running]> on host f153e58ecd1c
+[2024-04-30T20:29:42.019+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='homework2_data_pipeline_demo' AIRFLOW_CTX_TASK_ID='data_aquisition' AIRFLOW_CTX_EXECUTION_DATE='2024-04-30T19:51:15.036853+00:00' AIRFLOW_CTX_TRY_NUMBER='4' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-04-30T19:51:15.036853+00:00'
+[2024-04-30T20:29:42.023+0000] {process_utils.py:182} INFO - Executing cmd: /usr/local/bin/python -m virtualenv /tmp/venv5bys07q1 --python=python
+[2024-04-30T20:29:42.037+0000] {process_utils.py:186} INFO - Output:
+[2024-04-30T20:29:43.234+0000] {process_utils.py:190} INFO - created virtual environment CPython3.8.19.final.0-64 in 424ms
+[2024-04-30T20:29:43.234+0000] {process_utils.py:190} INFO -   creator CPython3Posix(dest=/tmp/venv5bys07q1, clear=False, no_vcs_ignore=False, global=False)
+[2024-04-30T20:29:43.235+0000] {process_utils.py:190} INFO -   seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=/home/***/.local/share/virtualenv)
+[2024-04-30T20:29:43.236+0000] {process_utils.py:190} INFO -     added seed packages: pip==24.0, setuptools==69.2.0, wheel==0.43.0
+[2024-04-30T20:29:43.236+0000] {process_utils.py:190} INFO -   activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+[2024-04-30T20:29:43.284+0000] {process_utils.py:182} INFO - Executing cmd: /tmp/venv5bys07q1/bin/pip install -r /tmp/venv5bys07q1/requirements.txt
+[2024-04-30T20:29:43.296+0000] {process_utils.py:186} INFO - Output:
+[2024-04-30T20:29:45.183+0000] {process_utils.py:190} INFO - Collecting dill (from -r /tmp/venv5bys07q1/requirements.txt (line 1))
+[2024-04-30T20:29:45.187+0000] {process_utils.py:190} INFO -   Using cached dill-0.3.8-py3-none-any.whl.metadata (10 kB)
+[2024-04-30T20:29:45.247+0000] {process_utils.py:190} INFO - Collecting funcsigs (from -r /tmp/venv5bys07q1/requirements.txt (line 2))
+[2024-04-30T20:29:45.257+0000] {process_utils.py:190} INFO -   Using cached funcsigs-1.0.2-py2.py3-none-any.whl.metadata (14 kB)
+[2024-04-30T20:29:45.274+0000] {process_utils.py:190} INFO - Using cached dill-0.3.8-py3-none-any.whl (116 kB)
+[2024-04-30T20:29:45.279+0000] {process_utils.py:190} INFO - Using cached funcsigs-1.0.2-py2.py3-none-any.whl (17 kB)
+[2024-04-30T20:29:45.390+0000] {process_utils.py:190} INFO - Installing collected packages: funcsigs, dill
+[2024-04-30T20:29:45.548+0000] {process_utils.py:190} INFO - Successfully installed dill-0.3.8 funcsigs-1.0.2
+[2024-04-30T20:29:45.925+0000] {process_utils.py:182} INFO - Executing cmd: /tmp/venv5bys07q1/bin/python /tmp/venv-calllr16mp2j/script.py /tmp/venv-calllr16mp2j/script.in /tmp/venv-calllr16mp2j/script.out /tmp/venv-calllr16mp2j/string_args.txt /tmp/venv-calllr16mp2j/termination.log
+[2024-04-30T20:29:45.939+0000] {process_utils.py:186} INFO - Output:
+[2024-04-30T20:29:46.090+0000] {process_utils.py:190} INFO - Traceback (most recent call last):
+[2024-04-30T20:29:46.091+0000] {process_utils.py:190} INFO -   File "/tmp/venv-calllr16mp2j/script.py", line 73, in <module>
+[2024-04-30T20:29:46.092+0000] {process_utils.py:190} INFO -     res = data_aquisition(*arg_dict["args"], **arg_dict["kwargs"])
+[2024-04-30T20:29:46.093+0000] {process_utils.py:190} INFO -   File "/tmp/venv-calllr16mp2j/script.py", line 23, in data_aquisition
+[2024-04-30T20:29:46.094+0000] {process_utils.py:190} INFO -     import pandas as pd
+[2024-04-30T20:29:46.095+0000] {process_utils.py:190} INFO - ModuleNotFoundError: No module named 'pandas'
+[2024-04-30T20:29:46.191+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 241, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 401, in execute
+    return super().execute(context=serializable_context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 723, in execute_callable
+    result = self._execute_python_callable_in_subprocess(python_path)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 478, in _execute_python_callable_in_subprocess
+    raise AirflowException(error_msg) from None
+airflow.exceptions.AirflowException: Process returned non-zero exit status 1.
+No module named 'pandas'
+[2024-04-30T20:29:46.197+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=homework2_data_pipeline_demo, task_id=data_aquisition, execution_date=20240430T195115, start_date=20240430T202941, end_date=20240430T202946
+[2024-04-30T20:29:46.219+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 26 for task data_aquisition (Process returned non-zero exit status 1.
+No module named 'pandas'; 4964)
+[2024-04-30T20:29:46.239+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-04-30T20:29:46.271+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

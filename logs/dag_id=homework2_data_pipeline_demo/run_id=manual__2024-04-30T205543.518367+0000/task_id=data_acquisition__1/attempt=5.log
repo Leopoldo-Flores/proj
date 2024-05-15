@@ -1,0 +1,50 @@
+[2024-04-30T21:07:15.091+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: homework2_data_pipeline_demo.data_acquisition__1 manual__2024-04-30T20:55:43.518367+00:00 [queued]>
+[2024-04-30T21:07:15.105+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: homework2_data_pipeline_demo.data_acquisition__1 manual__2024-04-30T20:55:43.518367+00:00 [queued]>
+[2024-04-30T21:07:15.106+0000] {taskinstance.py:2193} INFO - Starting attempt 5 of 5
+[2024-04-30T21:07:15.126+0000] {taskinstance.py:2217} INFO - Executing <Task(_PythonVirtualenvDecoratedOperator): data_acquisition__1> on 2024-04-30 20:55:43.518367+00:00
+[2024-04-30T21:07:15.132+0000] {standard_task_runner.py:60} INFO - Started process 6764 to run task
+[2024-04-30T21:07:15.138+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'homework2_data_pipeline_demo', 'data_acquisition__1', 'manual__2024-04-30T20:55:43.518367+00:00', '--job-id', '73', '--raw', '--subdir', 'DAGS_FOLDER/pipeline.py', '--cfg-path', '/tmp/tmp4nkpfy3j']
+[2024-04-30T21:07:15.140+0000] {standard_task_runner.py:88} INFO - Job 73: Subtask data_acquisition__1
+[2024-04-30T21:07:15.216+0000] {task_command.py:423} INFO - Running <TaskInstance: homework2_data_pipeline_demo.data_acquisition__1 manual__2024-04-30T20:55:43.518367+00:00 [running]> on host f153e58ecd1c
+[2024-04-30T21:07:15.325+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='homework2_data_pipeline_demo' AIRFLOW_CTX_TASK_ID='data_acquisition__1' AIRFLOW_CTX_EXECUTION_DATE='2024-04-30T20:55:43.518367+00:00' AIRFLOW_CTX_TRY_NUMBER='5' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-04-30T20:55:43.518367+00:00'
+[2024-04-30T21:07:15.329+0000] {process_utils.py:182} INFO - Executing cmd: /usr/local/bin/python -m virtualenv /tmp/venvxc5t0sfy --python=python
+[2024-04-30T21:07:15.341+0000] {process_utils.py:186} INFO - Output:
+[2024-04-30T21:07:16.457+0000] {process_utils.py:190} INFO - created virtual environment CPython3.8.19.final.0-64 in 455ms
+[2024-04-30T21:07:16.458+0000] {process_utils.py:190} INFO -   creator CPython3Posix(dest=/tmp/venvxc5t0sfy, clear=False, no_vcs_ignore=False, global=False)
+[2024-04-30T21:07:16.459+0000] {process_utils.py:190} INFO -   seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=/home/***/.local/share/virtualenv)
+[2024-04-30T21:07:16.460+0000] {process_utils.py:190} INFO -     added seed packages: pip==24.0, setuptools==69.2.0, wheel==0.43.0
+[2024-04-30T21:07:16.461+0000] {process_utils.py:190} INFO -   activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+[2024-04-30T21:07:16.516+0000] {process_utils.py:182} INFO - Executing cmd: /tmp/venvxc5t0sfy/bin/pip install -r /tmp/venvxc5t0sfy/requirements.txt
+[2024-04-30T21:07:16.528+0000] {process_utils.py:186} INFO - Output:
+[2024-04-30T21:07:18.355+0000] {process_utils.py:190} INFO - Collecting dill (from -r /tmp/venvxc5t0sfy/requirements.txt (line 1))
+[2024-04-30T21:07:18.359+0000] {process_utils.py:190} INFO -   Using cached dill-0.3.8-py3-none-any.whl.metadata (10 kB)
+[2024-04-30T21:07:18.393+0000] {process_utils.py:190} INFO - Collecting funcsigs (from -r /tmp/venvxc5t0sfy/requirements.txt (line 2))
+[2024-04-30T21:07:18.397+0000] {process_utils.py:190} INFO -   Using cached funcsigs-1.0.2-py2.py3-none-any.whl.metadata (14 kB)
+[2024-04-30T21:07:18.747+0000] {process_utils.py:190} INFO - Collecting pandas (from -r /tmp/venvxc5t0sfy/requirements.txt (line 3))
+[2024-04-30T21:07:18.750+0000] {process_utils.py:190} INFO -   Using cached pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (18 kB)
+[2024-04-30T21:07:18.995+0000] {process_utils.py:190} INFO - Collecting python-dateutil>=2.8.2 (from pandas->-r /tmp/venvxc5t0sfy/requirements.txt (line 3))
+[2024-04-30T21:07:19.001+0000] {process_utils.py:190} INFO -   Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+[2024-04-30T21:07:19.162+0000] {process_utils.py:190} INFO - Collecting pytz>=2020.1 (from pandas->-r /tmp/venvxc5t0sfy/requirements.txt (line 3))
+[2024-04-30T21:07:19.166+0000] {process_utils.py:190} INFO -   Using cached pytz-2024.1-py2.py3-none-any.whl.metadata (22 kB)
+[2024-04-30T21:07:19.217+0000] {process_utils.py:190} INFO - Collecting tzdata>=2022.1 (from pandas->-r /tmp/venvxc5t0sfy/requirements.txt (line 3))
+[2024-04-30T21:07:19.221+0000] {process_utils.py:190} INFO -   Using cached tzdata-2024.1-py2.py3-none-any.whl.metadata (1.4 kB)
+[2024-04-30T21:07:19.690+0000] {process_utils.py:190} INFO - Collecting numpy>=1.20.3 (from pandas->-r /tmp/venvxc5t0sfy/requirements.txt (line 3))
+[2024-04-30T21:07:19.693+0000] {process_utils.py:190} INFO -   Using cached numpy-1.24.4-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.6 kB)
+[2024-04-30T21:07:19.744+0000] {process_utils.py:190} INFO - Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas->-r /tmp/venvxc5t0sfy/requirements.txt (line 3))
+[2024-04-30T21:07:19.747+0000] {process_utils.py:190} INFO -   Using cached six-1.16.0-py2.py3-none-any.whl.metadata (1.8 kB)
+[2024-04-30T21:07:19.763+0000] {process_utils.py:190} INFO - Using cached dill-0.3.8-py3-none-any.whl (116 kB)
+[2024-04-30T21:07:19.767+0000] {process_utils.py:190} INFO - Using cached funcsigs-1.0.2-py2.py3-none-any.whl (17 kB)
+[2024-04-30T21:07:19.770+0000] {process_utils.py:190} INFO - Using cached pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)
+[2024-04-30T21:07:19.810+0000] {process_utils.py:190} INFO - Using cached numpy-1.24.4-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (17.3 MB)
+[2024-04-30T21:07:19.867+0000] {process_utils.py:190} INFO - Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+[2024-04-30T21:07:19.871+0000] {process_utils.py:190} INFO - Using cached pytz-2024.1-py2.py3-none-any.whl (505 kB)
+[2024-04-30T21:07:19.875+0000] {process_utils.py:190} INFO - Using cached tzdata-2024.1-py2.py3-none-any.whl (345 kB)
+[2024-04-30T21:07:19.879+0000] {process_utils.py:190} INFO - Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+[2024-04-30T21:07:20.378+0000] {process_utils.py:190} INFO - Installing collected packages: pytz, funcsigs, tzdata, six, numpy, dill, python-dateutil, pandas
+[2024-04-30T21:07:29.949+0000] {process_utils.py:190} INFO - Successfully installed dill-0.3.8 funcsigs-1.0.2 numpy-1.24.4 pandas-2.0.3 python-dateutil-2.9.0.post0 pytz-2024.1 six-1.16.0 tzdata-2024.1
+[2024-04-30T21:07:30.416+0000] {process_utils.py:182} INFO - Executing cmd: /tmp/venvxc5t0sfy/bin/python /tmp/venv-callk1y41qwz/script.py /tmp/venv-callk1y41qwz/script.in /tmp/venv-callk1y41qwz/script.out /tmp/venv-callk1y41qwz/string_args.txt /tmp/venv-callk1y41qwz/termination.log
+[2024-04-30T21:07:30.427+0000] {process_utils.py:186} INFO - Output:
+[2024-04-30T21:07:31.387+0000] {python.py:202} INFO - Done. Returned value was: {'status': 'success', 'data_path': '/storage/acquire/Metro_zori_uc_sfrcondomfr_sm_month.csv'}
+[2024-04-30T21:07:31.433+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=homework2_data_pipeline_demo, task_id=data_acquisition__1, execution_date=20240430T205543, start_date=20240430T210715, end_date=20240430T210731
+[2024-04-30T21:07:31.497+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-04-30T21:07:31.536+0000] {taskinstance.py:3312} INFO - 1 downstream tasks scheduled from follow-on schedule check

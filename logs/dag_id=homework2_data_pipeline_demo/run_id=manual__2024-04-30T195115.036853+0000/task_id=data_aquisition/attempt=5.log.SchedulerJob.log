@@ -1,0 +1,1 @@
+[2024-04-30T20:30:27.702+0000] {scheduler_job_runner.py:780} ERROR - Executor reports task instance <TaskInstance: homework2_data_pipeline_demo.data_aquisition manual__2024-04-30T19:51:15.036853+00:00 [queued]> finished (failed) although the task says it's queued. (Info: None) Was the task killed externally?

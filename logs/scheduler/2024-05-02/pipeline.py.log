@@ -1,0 +1,3 @@
+[2024-05-02T04:56:41.748+0000] {processor.py:161} INFO - Started process (PID=65792) to work on /opt/airflow/dags/pipeline.py
+[2024-05-02T04:56:41.750+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pipeline.py for tasks to queue
+[2024-05-02T04:56:41.754+0000] {logging_mixin.py:188} INFO - [2024-05-02T04:56:41.754+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline.py

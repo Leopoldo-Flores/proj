@@ -1,0 +1,57 @@
+[2024-04-30T20:22:31.960+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: homework2_data_pipeline_demo.data_acquisition manual__2024-04-30T19:51:15.036853+00:00 [queued]>
+[2024-04-30T20:22:31.973+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: homework2_data_pipeline_demo.data_acquisition manual__2024-04-30T19:51:15.036853+00:00 [queued]>
+[2024-04-30T20:22:31.974+0000] {taskinstance.py:2193} INFO - Starting attempt 3 of 3
+[2024-04-30T20:22:31.992+0000] {taskinstance.py:2217} INFO - Executing <Task(_PythonVirtualenvDecoratedOperator): data_acquisition> on 2024-04-30 19:51:15.036853+00:00
+[2024-04-30T20:22:32.000+0000] {standard_task_runner.py:60} INFO - Started process 4808 to run task
+[2024-04-30T20:22:32.004+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'homework2_data_pipeline_demo', 'data_acquisition', 'manual__2024-04-30T19:51:15.036853+00:00', '--job-id', '24', '--raw', '--subdir', 'DAGS_FOLDER/Hw2.py', '--cfg-path', '/tmp/tmpec2iltsw']
+[2024-04-30T20:22:32.006+0000] {standard_task_runner.py:88} INFO - Job 24: Subtask data_acquisition
+[2024-04-30T20:22:32.072+0000] {task_command.py:423} INFO - Running <TaskInstance: homework2_data_pipeline_demo.data_acquisition manual__2024-04-30T19:51:15.036853+00:00 [running]> on host f153e58ecd1c
+[2024-04-30T20:22:32.171+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='homework2_data_pipeline_demo' AIRFLOW_CTX_TASK_ID='data_acquisition' AIRFLOW_CTX_EXECUTION_DATE='2024-04-30T19:51:15.036853+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-04-30T19:51:15.036853+00:00'
+[2024-04-30T20:22:32.175+0000] {process_utils.py:182} INFO - Executing cmd: /usr/local/bin/python -m virtualenv /tmp/venv0n6bgpw2 --python=python
+[2024-04-30T20:22:32.187+0000] {process_utils.py:186} INFO - Output:
+[2024-04-30T20:22:33.213+0000] {process_utils.py:190} INFO - created virtual environment CPython3.8.19.final.0-64 in 417ms
+[2024-04-30T20:22:33.214+0000] {process_utils.py:190} INFO -   creator CPython3Posix(dest=/tmp/venv0n6bgpw2, clear=False, no_vcs_ignore=False, global=False)
+[2024-04-30T20:22:33.215+0000] {process_utils.py:190} INFO -   seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=/home/***/.local/share/virtualenv)
+[2024-04-30T20:22:33.215+0000] {process_utils.py:190} INFO -     added seed packages: pip==24.0, setuptools==69.2.0, wheel==0.43.0
+[2024-04-30T20:22:33.216+0000] {process_utils.py:190} INFO -   activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+[2024-04-30T20:22:33.264+0000] {process_utils.py:182} INFO - Executing cmd: /tmp/venv0n6bgpw2/bin/pip install -r /tmp/venv0n6bgpw2/requirements.txt
+[2024-04-30T20:22:33.276+0000] {process_utils.py:186} INFO - Output:
+[2024-04-30T20:22:34.861+0000] {process_utils.py:190} INFO - Collecting dill (from -r /tmp/venv0n6bgpw2/requirements.txt (line 1))
+[2024-04-30T20:22:34.865+0000] {process_utils.py:190} INFO -   Using cached dill-0.3.8-py3-none-any.whl.metadata (10 kB)
+[2024-04-30T20:22:34.899+0000] {process_utils.py:190} INFO - Collecting funcsigs (from -r /tmp/venv0n6bgpw2/requirements.txt (line 2))
+[2024-04-30T20:22:34.902+0000] {process_utils.py:190} INFO -   Using cached funcsigs-1.0.2-py2.py3-none-any.whl.metadata (14 kB)
+[2024-04-30T20:22:34.916+0000] {process_utils.py:190} INFO - Using cached dill-0.3.8-py3-none-any.whl (116 kB)
+[2024-04-30T20:22:34.919+0000] {process_utils.py:190} INFO - Using cached funcsigs-1.0.2-py2.py3-none-any.whl (17 kB)
+[2024-04-30T20:22:35.036+0000] {process_utils.py:190} INFO - Installing collected packages: funcsigs, dill
+[2024-04-30T20:22:35.200+0000] {process_utils.py:190} INFO - Successfully installed dill-0.3.8 funcsigs-1.0.2
+[2024-04-30T20:22:35.525+0000] {process_utils.py:182} INFO - Executing cmd: /tmp/venv0n6bgpw2/bin/python /tmp/venv-callg172ck5t/script.py /tmp/venv-callg172ck5t/script.in /tmp/venv-callg172ck5t/script.out /tmp/venv-callg172ck5t/string_args.txt /tmp/venv-callg172ck5t/termination.log
+[2024-04-30T20:22:35.537+0000] {process_utils.py:186} INFO - Output:
+[2024-04-30T20:22:35.650+0000] {process_utils.py:190} INFO - Traceback (most recent call last):
+[2024-04-30T20:22:35.651+0000] {process_utils.py:190} INFO -   File "/tmp/venv-callg172ck5t/script.py", line 59, in <module>
+[2024-04-30T20:22:35.652+0000] {process_utils.py:190} INFO -     res = data_acquisition(*arg_dict["args"], **arg_dict["kwargs"])
+[2024-04-30T20:22:35.653+0000] {process_utils.py:190} INFO -   File "/tmp/venv-callg172ck5t/script.py", line 25, in data_acquisition
+[2024-04-30T20:22:35.653+0000] {process_utils.py:190} INFO -     os.makedirs(os.path.dirname(data_path), exist_ok=True)
+[2024-04-30T20:22:35.654+0000] {process_utils.py:190} INFO - NameError: name 'os' is not defined
+[2024-04-30T20:22:35.720+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 241, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 401, in execute
+    return super().execute(context=serializable_context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 723, in execute_callable
+    result = self._execute_python_callable_in_subprocess(python_path)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 478, in _execute_python_callable_in_subprocess
+    raise AirflowException(error_msg) from None
+airflow.exceptions.AirflowException: Process returned non-zero exit status 1.
+name 'os' is not defined
+[2024-04-30T20:22:35.725+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=homework2_data_pipeline_demo, task_id=data_acquisition, execution_date=20240430T195115, start_date=20240430T202231, end_date=20240430T202235
+[2024-04-30T20:22:35.747+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 24 for task data_acquisition (Process returned non-zero exit status 1.
+name 'os' is not defined; 4808)
+[2024-04-30T20:22:35.793+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-04-30T20:22:35.823+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
